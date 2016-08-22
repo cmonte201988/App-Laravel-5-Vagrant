@@ -23,9 +23,11 @@ $ vagrant plugin install vagrant-hostmanager
 //
 $ vagrant plugin install vagrant-vbguest
 ```
-#### <i class="icon-hdd"></i> Configuración del Ambiente
+
+<i class="icon-hdd"></i> Configuración del Ambiente
 
 Se esta usando un **box** genérico, por ello se tiene que hacer un paso mas en la configuración de la Virtual Machine.
+
 ```
 // Ingresamos a la máquina virtual via SSH
 $ vagrant ssh
@@ -34,7 +36,9 @@ $ cd /etc/apache2/sites-available
 // Editar el archivo 000-default.conf
 $ sudo vim 000-default.conf
 ```
+
 Modificar el archivo quedando de la siguiente forma.
+
 ```
 <VirtualHost *:80>
 	ServerName beautymove.local
@@ -49,7 +53,9 @@ Modificar el archivo quedando de la siguiente forma.
 
 </VirtualHost>
 ```
+
 Luego de haber configurado el archivo, proceder a activar el cambio y reiniciar el servicio **apache2**
+
 ```
 //
 $ sudo a2ensite 000-default.conf
